@@ -44,3 +44,18 @@ margin_right = 40.0
 margin_bottom = 465.0
 rect_scale = Vector2( 25.6103, 4.38872 )
 color = Color( 0.160784, 0.145098, 0.121569, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/TextBox"]
+margin_left = 2.30376
+margin_top = 6.60785
+margin_right = 42.3038
+margin_bottom = 46.6078
+rect_scale = Vector2( 23.52, 3.08 )
+
+[node name="Tween" type="Tween" parent="Control/TextBox"]
+
+[node name="Label" type="Label" parent="Control/TextBox"]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_scale = Vector2( 0.141402, 0.740739 )
+text = "Imie"
