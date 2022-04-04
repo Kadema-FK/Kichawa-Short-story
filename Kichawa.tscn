@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://grafiki/background.jpeg" type="Texture" id=1]
 [ext_resource path="res://Dialog.gd" type="Script" id=2]
 [ext_resource path="res://grafiki/Kifo.png" type="Texture" id=3]
 [ext_resource path="res://grafiki/Chawa.png" type="Texture" id=4]
+[ext_resource path="res://Punkt_kontrolny.gd" type="Script" id=5]
 
 [node name="Kichawa" type="Node2D"]
 
@@ -24,38 +25,55 @@ position = Vector2( 521, 358 )
 [node name="Lewo" type="Position2D" parent="."]
 position = Vector2( 182, 358 )
 
-[node name="Control" type="Control" parent="."]
+[node name="Punkt_kontrolny" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Kifo" type="Sprite" parent="Control"]
+[node name="Kifo" type="Sprite" parent="Punkt_kontrolny"]
 position = Vector2( 853, 367 )
 scale = Vector2( 0.631956, 0.631956 )
 texture = ExtResource( 3 )
 
-[node name="Chawa" type="Sprite" parent="Control"]
+[node name="Chawa" type="Sprite" parent="Punkt_kontrolny"]
 position = Vector2( 127, 313 )
 scale = Vector2( 0.76, 0.76 )
 texture = ExtResource( 4 )
 
-[node name="TextBox" type="ColorRect" parent="Control"]
+[node name="TextBox" type="ColorRect" parent="Punkt_kontrolny"]
 margin_top = 425.0
 margin_right = 40.0
 margin_bottom = 465.0
 rect_scale = Vector2( 25.6103, 4.38872 )
 color = Color( 0.160784, 0.145098, 0.121569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/TextBox"]
-margin_left = 2.30376
-margin_top = 6.60785
-margin_right = 42.3038
-margin_bottom = 46.6078
-rect_scale = Vector2( 23.52, 3.08 )
+[node name="RichTextLabel" type="RichTextLabel" parent="Punkt_kontrolny/TextBox"]
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 40.0
+bbcode_enabled = true
+bbcode_text = "Test Test dluzszy"
+meta_underlined = false
+text = "Test Test dluzszy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tween" type="Tween" parent="Control/TextBox"]
+[node name="Tween" type="Tween" parent="Punkt_kontrolny/TextBox"]
 
-[node name="Label" type="Label" parent="Control/TextBox"]
+[node name="Label" type="Label" parent="Punkt_kontrolny/TextBox"]
 margin_right = 40.0
 margin_bottom = 14.0
 rect_scale = Vector2( 0.141402, 0.740739 )
 text = "Imie"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="tween_completed" from="Punkt_kontrolny/TextBox/Tween" to="Punkt_kontrolny" method="_on_Tween_tween_completed"]

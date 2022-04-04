@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Kichawa- Short-story"
+run/main_scene="res://Kichawa.tscn"
 config/icon="res://icon.png"
 
 [physics]
