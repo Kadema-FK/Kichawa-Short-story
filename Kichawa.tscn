@@ -76,9 +76,12 @@ margin_bottom = 440.0
 rect_scale = Vector2( 0.013, 0.056 )
 custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
-bbcode_text = "Test Test dluzszy"
+bbcode_text = "Test Test dluższy"
 meta_underlined = false
-text = "Test Test dluzszy"
+text = "Test Test dluższy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Tween" type="Tween" parent="Punkt_kontrolny/TextBox"]
 

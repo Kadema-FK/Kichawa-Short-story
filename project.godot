@@ -14,9 +14,10 @@ config/name="Kichawa- Short-story"
 run/main_scene="res://Kichawa.tscn"
 config/icon="res://icon.png"
 
-[physics]
+[display]
 
-common/enable_pause_aware_picking=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [rendering]
 
