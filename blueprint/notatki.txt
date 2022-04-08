@@ -1,0 +1,23 @@
+Shameful ending:
+K: Hej, a w sumie, to o co poszło?
+Ch: *Wzrusza ramionami*
+K: 
+
+
+Beginning:
+Ach, jaki piękny dzień. 
+Znają mnie pod wieloma imionami. 
+*wybierz imię*
+W sumie to wszyscy nazywają mnie *wybierz imię*.
+
+
+Narrator: Pojawiają się Chawa z Kifo.
+Kifo: Coś mówi Kifo.
+Chawa: Chawa smutna.
+Gracz wybiera: opcja1, opcja 2
+Chawa: Reakcja Chawa
+Kifo: Reakcja Kifo. 
+
+
+
+
