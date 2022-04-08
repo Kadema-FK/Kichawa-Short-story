@@ -11,6 +11,18 @@ var nastroj
 
 func _ready():
 	wczytajDialog()
+	
+
+func _physics_process(_delta):
+	if aktywne:
+		if Input.is_action_just_pressed("ui_accept"):
+			if zakonczone == true:
+				wczytajDialog()
+			else:
+				$TextBox/Tween.stop_all()
+				$TextBox/RichTextLabel.percent_visible = 1
+				zakonczone = true
+	
 
 func wczytajDialog():
 	if dialog_indeks < tekst.size():

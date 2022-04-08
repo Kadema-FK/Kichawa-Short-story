@@ -26,7 +26,7 @@ var scena1 = [
 		"Imie": "",
 		"Nastroj": "",
 		"Pozycja":"",
-		"Tekst":"",
+		"Tekst":"Opcje",
 		"Wybor": ["opcja1","opcja 2"]
 	},	
 	{
@@ -41,6 +41,13 @@ var scena1 = [
 		"Nastroj": "Neutralny",
 		"Pozycja":"Prawo",
 		"Tekst":"Reakcja Kifo. ",
+		"Wybor": ["",""]
+	},
+	{
+		"Imie": "Narrator",
+		"Nastroj": "Neutralny",
+		"Pozycja":"",
+		"Tekst":"Koniec",
 		"Wybor": ["",""]
 	}
 ]
