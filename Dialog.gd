@@ -27,9 +27,12 @@ var scena1 = [
 		"Imie": "",
 		"Nastroj": "",
 		"Pozycja":"",
-		"Tekst":"Opcje",
-		"Wybor": ["opcja1","opcja 2"]
-	},	
+		"Tekst":"",
+		"Wybor": ["opcja1","opcja2"]
+	}
+]
+
+var scena2 = [
 	{
 		"Imie": "Chawa",
 		"Nastroj": "Smutny",
@@ -37,6 +40,16 @@ var scena1 = [
 		"Tekst":"Reakcja Chawa",
 		"Wybor": ["",""]
 	},
+	{
+		"Imie": "Narrator",
+		"Nastroj": "Neutralny",
+		"Pozycja":"",
+		"Tekst":"Koniec ścieżki #1",
+		"Wybor": ["",""]
+	}
+]
+
+var scena3 = [
 	{
 		"Imie": "Kifo",
 		"Nastroj": "Neutralny",
@@ -48,7 +61,7 @@ var scena1 = [
 		"Imie": "Narrator",
 		"Nastroj": "Neutralny",
 		"Pozycja":"",
-		"Tekst":"Koniec",
+		"Tekst":"Koniec ścieżki #2",
 		"Wybor": ["",""]
 	}
 ]

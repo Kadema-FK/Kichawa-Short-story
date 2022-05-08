@@ -32,6 +32,16 @@ func _physics_process(_delta):
 			$Chawa.visible = true
 			if pozycja != "":
 				$Chawa.global_position = get_parent().get_node(pozycja).position
+				
+		if $Opcja1.text == "":
+			$Opcja1.visible = false
+		else:
+			$Opcja1.visible = true
+		
+		if $Opcja2.text == "":
+			$Opcja2.visible = false
+		else:
+			$Opcja2.visible = true
 
 
 func wczytajDialog():
@@ -42,6 +52,9 @@ func wczytajDialog():
 		$TextBox.visible = true
 		$TextBox/RichTextLabel.bbcode_text=tekst[dialog_indeks]["Tekst"]
 		$TextBox/Label.text = tekst[dialog_indeks]["Imie"]
+		$Opcja1.text = tekst[dialog_indeks]["Wybor"][0]
+		$Opcja2.text = tekst[dialog_indeks]["Wybor"][1]
+		
 		
 		pozycja = tekst[dialog_indeks]["Pozycja"]
 		
@@ -61,3 +74,21 @@ func wczytajDialog():
 
 func _on_Tween_tween_completed(_object, _key):
 	zakonczone = true
+
+
+func _on_Opcja1_pressed():
+	if $Opcja1.text == "opcja1":
+		$Opcja1.text = ""
+		$Opcja2.text = ""
+		tekst = get_parent().get_node("Dialog").scena2
+		dialog_indeks = 0
+		wczytajDialog()
+
+
+func _on_Opcja2_pressed():
+	if $Opcja2.text == "opcja2":
+		$Opcja1.text = ""
+		$Opcja2.text = ""
+		tekst = get_parent().get_node("Dialog").scena3
+		dialog_indeks = 0
+		wczytajDialog()

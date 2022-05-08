@@ -97,4 +97,26 @@ custom_colors/font_color = Color( 1, 0.941176, 0.47451, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Imię"
 
+[node name="Opcja1" type="Button" parent="Punkt_kontrolny"]
+margin_left = 356.0
+margin_top = 103.0
+margin_right = 665.0
+margin_bottom = 145.0
+text = "Wybór1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opcja2" type="Button" parent="Punkt_kontrolny"]
+margin_left = 356.0
+margin_top = 168.0
+margin_right = 665.0
+margin_bottom = 210.0
+text = "Wybór1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="tween_completed" from="Punkt_kontrolny/TextBox/Tween" to="Punkt_kontrolny" method="_on_Tween_tween_completed"]
+[connection signal="pressed" from="Punkt_kontrolny/Opcja1" to="Punkt_kontrolny" method="_on_Opcja1_pressed"]
+[connection signal="pressed" from="Punkt_kontrolny/Opcja2" to="Punkt_kontrolny" method="_on_Opcja2_pressed"]
