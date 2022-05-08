@@ -6,7 +6,8 @@ var scena1 = [
 		"Nastroj": "",
 		"Pozycja":"",
 		"Tekst":"Pojawiają się Chawa z Kifo.",
-		"Wybor": ["",""]
+		"Wybor": ["",""]#
+		#"Odchodzi": ["",""]
 	},	
 	{
 		"Imie": "Kifo",
@@ -32,14 +33,14 @@ var scena1 = [
 	{
 		"Imie": "Chawa",
 		"Nastroj": "Smutny",
-		"Pozycja":"Lewo",
+		"Pozycja":"Prawo",
 		"Tekst":"Reakcja Chawa",
 		"Wybor": ["",""]
 	},
 	{
 		"Imie": "Kifo",
 		"Nastroj": "Neutralny",
-		"Pozycja":"Prawo",
+		"Pozycja":"Lewo",
 		"Tekst":"Reakcja Kifo. ",
 		"Wybor": ["",""]
 	},

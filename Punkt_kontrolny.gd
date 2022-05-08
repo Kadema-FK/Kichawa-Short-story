@@ -22,7 +22,17 @@ func _physics_process(_delta):
 				$TextBox/Tween.stop_all()
 				$TextBox/RichTextLabel.percent_visible = 1
 				zakonczone = true
-	
+				
+		if $TextBox/Label.text == "Kifo": #Zmienić na słownik?
+			$Kifo.visible = true
+			if pozycja != "":
+				$Kifo.global_position = get_parent().get_node(pozycja).position
+
+		if $TextBox/Label.text == "Chawa": #Zmienić na słownik?
+			$Chawa.visible = true
+			if pozycja != "":
+				$Chawa.global_position = get_parent().get_node(pozycja).position
+
 
 func wczytajDialog():
 	if dialog_indeks < tekst.size():
