@@ -1,6 +1,8 @@
 extends Control
 
 onready var tekst = get_parent().get_node("Dialog").scena1
+var zszokowana_chawa = preload("res://grafiki/Chawa_Chibi.png")
+var smutna_chawa = preload("res://grafiki/Chawa.png")
 
 var dialog_indeks = 0
 var zakonczone
@@ -27,11 +29,16 @@ func _physics_process(_delta):
 			$Kifo.visible = true
 			if pozycja != "":
 				$Kifo.global_position = get_parent().get_node(pozycja).position
+				
 
 		if $TextBox/Label.text == "Chawa": #Zmienić na słownik?
 			$Chawa.visible = true
 			if pozycja != "":
 				$Chawa.global_position = get_parent().get_node(pozycja).position
+				if nastroj == "Smutny":
+					$Chawa.texture = smutna_chawa
+				else:
+					$Chawa.texture = zszokowana_chawa
 				
 		if $Opcja1.text == "":
 			$Opcja1.visible = false
@@ -55,8 +62,8 @@ func wczytajDialog():
 		$Opcja1.text = tekst[dialog_indeks]["Wybor"][0]
 		$Opcja2.text = tekst[dialog_indeks]["Wybor"][1]
 		
-		
 		pozycja = tekst[dialog_indeks]["Pozycja"]
+		nastroj = tekst[dialog_indeks]["Nastroj"]
 		
 		$TextBox/RichTextLabel.percent_visible = 0
 		$TextBox/Tween.interpolate_property(

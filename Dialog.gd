@@ -35,8 +35,8 @@ var scena1 = [
 var scena2 = [
 	{
 		"Imie": "Chawa",
-		"Nastroj": "Smutny",
-		"Pozycja":"Prawo",
+		"Nastroj": "Szok",
+		"Pozycja":"Lewo",
 		"Tekst":"Reakcja Chawa",
 		"Wybor": ["",""]
 	},
@@ -53,7 +53,7 @@ var scena3 = [
 	{
 		"Imie": "Kifo",
 		"Nastroj": "Neutralny",
-		"Pozycja":"Lewo",
+		"Pozycja":"Prawo",
 		"Tekst":"Reakcja Kifo. ",
 		"Wybor": ["",""]
 	},
