@@ -8,11 +8,14 @@ var dialog_indeks = 0
 var zakonczone
 var aktywne
 
+var imie
+
 var pozycja
 var nastroj
 
 func _ready():
-	wczytajDialog()
+	poznajImie()
+	
 	
 
 func _physics_process(_delta):
@@ -50,6 +53,11 @@ func _physics_process(_delta):
 		else:
 			$Opcja2.visible = true
 
+func poznajImie():
+	$Wprowadz_imie.visible = true
+	$TextBox.visible = true
+	$TextBox/RichTextLabel.bbcode_text="Podaj swe imię i wejdź"
+
 
 func wczytajDialog():
 	if dialog_indeks < tekst.size():
@@ -57,7 +65,7 @@ func wczytajDialog():
 		zakonczone = false
 		
 		$TextBox.visible = true
-		$TextBox/RichTextLabel.bbcode_text=tekst[dialog_indeks]["Tekst"]
+		$TextBox/RichTextLabel.bbcode_text=tekst[dialog_indeks]["Tekst"].replace("{{imie}}",imie)
 		$TextBox/Label.text = tekst[dialog_indeks]["Imie"]
 		$Opcja1.text = tekst[dialog_indeks]["Wybor"][0]
 		$Opcja2.text = tekst[dialog_indeks]["Wybor"][1]
@@ -99,3 +107,9 @@ func _on_Opcja2_pressed():
 		tekst = get_parent().get_node("Dialog").scena3
 		dialog_indeks = 0
 		wczytajDialog()
+
+
+func _on_Wprowadz_imie_text_entered(new_text):
+	$Wprowadz_imie.visible = false
+	imie = new_text
+	wczytajDialog()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://grafiki/background.jpeg" type="Texture" id=1]
 [ext_resource path="res://Dialog.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://grafiki/Chawa.png" type="Texture" id=4]
 [ext_resource path="res://Punkt_kontrolny.gd" type="Script" id=5]
 [ext_resource path="res://Czcionki/DukasCFRegular-Regular.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Czcionki/DukasCFBold-Regular.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://Wprowadz_imie.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFontData" id=3]
 font_path = "res://Czcionki/DukasCFRegular-Regular.otf"
@@ -20,6 +22,13 @@ outline_size = 4
 outline_color = Color( 0.0666667, 0.0235294, 0.00784314, 1 )
 use_filter = true
 font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+font_data = ExtResource( 7 )
+
+[sub_resource type="Theme" id=6]
+default_font = SubResource( 5 )
 
 [node name="Kichawa" type="Node2D"]
 
@@ -88,6 +97,7 @@ __meta__ = {
 [node name="Tween" type="Tween" parent="Punkt_kontrolny/TextBox"]
 
 [node name="Label" type="Label" parent="Punkt_kontrolny/TextBox"]
+visible = false
 margin_left = 2.57709
 margin_top = 2.05078
 margin_right = 303.577
@@ -96,8 +106,12 @@ rect_scale = Vector2( 0.013, 0.056 )
 custom_colors/font_color = Color( 1, 0.941176, 0.47451, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Imię"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Opcja1" type="Button" parent="Punkt_kontrolny"]
+visible = false
 margin_left = 356.0
 margin_top = 103.0
 margin_right = 665.0
@@ -108,6 +122,7 @@ __meta__ = {
 }
 
 [node name="Opcja2" type="Button" parent="Punkt_kontrolny"]
+visible = false
 margin_left = 356.0
 margin_top = 168.0
 margin_right = 665.0
@@ -117,6 +132,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Wprowadz_imie" type="LineEdit" parent="Punkt_kontrolny"]
+margin_left = 356.0
+margin_top = 328.0
+margin_right = 665.0
+margin_bottom = 380.0
+theme = SubResource( 6 )
+text = "Shi"
+caret_blink = true
+script = ExtResource( 8 )
+
 [connection signal="tween_completed" from="Punkt_kontrolny/TextBox/Tween" to="Punkt_kontrolny" method="_on_Tween_tween_completed"]
 [connection signal="pressed" from="Punkt_kontrolny/Opcja1" to="Punkt_kontrolny" method="_on_Opcja1_pressed"]
 [connection signal="pressed" from="Punkt_kontrolny/Opcja2" to="Punkt_kontrolny" method="_on_Opcja2_pressed"]
+[connection signal="text_entered" from="Punkt_kontrolny/Wprowadz_imie" to="Punkt_kontrolny" method="_on_Wprowadz_imie_text_entered"]

@@ -13,7 +13,7 @@ var scena1 = [
 		"Imie": "Kifo",
 		"Nastroj": "Neutralny",
 		"Pozycja":"Prawo",
-		"Tekst":"Coś mówi Kifo.",
+		"Tekst":"Coś mówi Kifo do {{imie}}",
 		"Wybor": ["",""]
 	},	
 	{
